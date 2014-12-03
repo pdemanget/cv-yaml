@@ -1,0 +1,9 @@
+{
+  "name": "cv-yaml",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "*",
+	"js-yaml": "*"
+  },
+  "devDependencies": {}
+}
