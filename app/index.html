@@ -105,6 +105,13 @@ angular.module('cvapp',[]).controller('MainCtrl', function ($scope) {
 
 	/* column-rule: 3px outset #ff00ff;*/
 }
+.no-breakable {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
 
 /* ... the rest of the rules ... */
 html{
@@ -155,14 +162,18 @@ h1{
 	text-transform: uppercase;
 	border-bottom: 1px solid #003567;
 }
-
-
+h2 {
+  margin: 0 0 5px 0;
+}
 h3{
 	color: #7F7F7F;
 }
 
 .skills::first-child h2{
 	margin-top: 0;
+}
+.skills>ul {
+  margin-bottom: 10px;
 }
 
 .experience h2{
@@ -228,9 +239,9 @@ p {
  <h1>Compétences Techniques et Fonctionnelles</h1>
  <div class="two-columns">
   <div ng-repeat="p in cv.skills" >
-   <div class="skill" ng-repeat="(key, values) in p" contenteditable="true" >
-	 <h2>{{key}}</h2>
-	 <ul><li ng-repeat="skill in values" contenteditable="true" >{{skill}}</li></ul>
+   <div class="skill no-breakable" ng-repeat="(key, values) in p" contenteditable="true" >
+	  <h2>{{key}}</h2>
+	  <ul><li ng-repeat="skill in values" contenteditable="true" >{{skill}}</li></ul>
    </div>
   </div>
  </div>
