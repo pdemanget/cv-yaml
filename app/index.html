@@ -130,7 +130,7 @@ body{
     width: 210mm;
     height: 297mm;
 	color: #58585A;
-	padding: 150px 50px 50px 100px;
+	padding: 120px 50px 50px 100px;
 	/* trick pour imprimer les bulles */
 	-webkit-print-color-adjust: exact;
 /* a essayer
@@ -139,6 +139,10 @@ body{
 
 p:before { content: url(images/quote.gif); }
 */	
+}
+
+ul li {
+	margin-bottom: 4px;
 }
 .titles {
 	text-align:right;
@@ -150,7 +154,12 @@ p:before { content: url(images/quote.gif); }
 	font-size: 20px;
 	margin: 5px;
 }
-
+.profile ul li {
+    background-image: url('style/bullet.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px; 
+    padding-left: 30px; 
+}
 .name{
 	font-size:30px;
 	font-weight: bold;
@@ -172,8 +181,14 @@ h3{
 .skills::first-child h2{
 	margin-top: 0;
 }
-.skills>ul {
+.skills ul {
   margin-bottom: 10px;
+}
+.skills ul li {
+    background-image: url('style/bullet.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px; 
+    padding-left: 30px; 
 }
 
 .experience h2{
@@ -186,7 +201,7 @@ ul {
     margin: 0px;
 }
 
-ul li {
+.formation ul li {
     background-image: url('style/bullet.png');
     background-repeat: no-repeat;
     background-position: 0px 0px; 
@@ -219,6 +234,21 @@ p {
 	break-before: auto;
 	break-inside: avoid;
 }
+.experiences ul {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid black;
+}
+.experiences div:last-child ul {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+.experiences ul li {
+    background-image: url('style/bullet.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px; 
+    padding-left: 30px; 
+}
 </style>
 </head><body ng-app="cvapp">
 <noscript>Javascript not started</noscript>
@@ -250,8 +280,10 @@ p {
 <div class="formation">
 	<h1>Formations</h1>
 	<ul><li ng-repeat="f in cv.formations">
-		<h2>{{f.year}}</h2><h3>{{f.title}}</h3>{{f.school}}
-	</li></ul>	
+		<h2>{{f.year}}</h2>
+		<h3>{{f.title}}</h3>
+		<span>{{f.school}}</span>
+	</li></ul>
 </div>
 <div class="lang">
 	<h1>Langues</h1>

@@ -1,27 +1,25 @@
 {
-  "name": "bjs",
+  "name": "cv-yaml",
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-coffee": "~0.7.0",
-    "grunt-contrib-uglify": "~0.2.0",
     "grunt-bower-install": "~0.5.0",
-    
-        "grunt": "~0.4.1",
-        "grunt-contrib-clean": "*",
-        "grunt-contrib-concat": "*",
-        "grunt-contrib-copy": "*",
-        "grunt-contrib-jshint": "*",
-        "grunt-contrib-jasmine": "*",
-        "grunt-contrib-less": "*",
-        "grunt-contrib-uglify": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-convert" : "*",
-        "grunt-lesslint": "*",
-        "grunt-karma": "*",
-        "karma-junit-reporter": "*",
-      "grunt-rev": "~0.1.0"
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-jasmine": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-convert": "*",
+    "grunt-karma": "*",
+    "grunt-lesslint": "*",
+    "grunt-lint5": "^0.3.1",
+    "grunt-rev": "~0.1.0",
+    "karma-junit-reporter": "*"
   },
   "engines": {
     "node": ">=0.8.0"
