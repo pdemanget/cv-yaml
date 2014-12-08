@@ -106,9 +106,9 @@ experience:
   duration :  05/2014
   project:
    title: Formation « Apprendre Java et l’Objet ».
-   description: |
-    Animation de la formation pour 4 stagiaires débutants en java.
-    Adaptation du support de formation au contexte client.
+   description:
+    - Animation de la formation pour 4 stagiaires débutants en java.
+    - Adaptation du support de formation au contexte client.
 
   role: 
    title: Formateur Java 
@@ -124,36 +124,18 @@ experience:
     description: Il s’agissait de créer une application de saisie de dossier patient pour les hôpitaux
   role :
    title:   Architecture de l’application JavaScript
-   description: |
-    Mise en place d’angularJS.
-    MVC basé sur ajax + rest +json
-    Développement sous Spring MVC
-    Développement des pages Javascript, du CSS compilé par Less
-    Mise en place grunt + jasmine + tests Jenkins Javascript
+   description:
+    - Mise en place d’angularJS.
+    - MVC basé sur ajax + rest +json
+    - Développement sous Spring MVC
+    - Développement des pages Javascript, du CSS compilé par Less
+    - Mise en place grunt + jasmine + tests Jenkins Javascript
 
   team: 4 personnes
   environment: Javascript AngularJS grunt JSON REST Spring Eclipse Less Postgres Tomcat junit karma jenkins
 
   
  -
-  enterprise: ..
-  enterpriseType:
-  duration :  ..
-  project:
-   title: ..
-   description: |
-    .
-    .
-
-  role: 
-   title: ..
-   description: |
-    .
-    .
-
-  team: .
-  environment: .
-
   enterprise: AIGA
   enterpriseType: Editeur Logiciel pour la petite enfance
   duration: 04/2013 à 06/2013
@@ -162,15 +144,15 @@ experience:
     description: Il s’agissait de refondre entièrement les écrans d’une application de gestion de crèche.
   role :
    title: Architecte sur les projets client et serveur
-   description: |
-     Intégration JavaScript pour Sencha ExtJS
-     Spring pour les services REST JSON
-     MVC basé sur ajax+rest+json
-     Formateur Javascript
-     Integration de Sencha ExtJS
-     Architecture MVC basé sur ajax + rest +json
-     Integration sous Spring MVC
-     Integration des pages Javascript, du CSS compilé par Compass
+   description:
+    - Intégration JavaScript pour Sencha ExtJS
+    - Spring pour les services REST JSON
+    - MVC basé sur ajax+rest+json
+    - Formateur Javascript
+    - Integration de Sencha ExtJS
+    - Architecture MVC basé sur ajax + rest +json
+    - Integration sous Spring MVC
+    - Integration des pages Javascript, du CSS compilé par Compass
  
  
   team: 12 personnes
@@ -183,12 +165,12 @@ experience:
     title:  site mysocialbook.com
     description: Il s’agissait du développement d’un site d’extraction d’informations Facebook
   role :
-   description: |
-    Architecture et intégration Javascript.
-    Integration de AngularJS
-    Architecture MVC basé sur ajax+json
-    Integration de BootstrapCSS
-    Integration des pages PHP, des plugins jQuery
+   description: 
+    - Architecture et intégration Javascript.
+    - Integration de AngularJS
+    - Architecture MVC basé sur ajax+json
+    - Integration de BootstrapCSS
+    - Integration des pages PHP, des plugins jQuery
 
   team: 2 personnes
   environment: AngularJS, BootstrapCSS, jQuery, jQueryUI, Netbeans, Facebook Graph API 
@@ -202,23 +184,24 @@ experience:
   project:
     title:  Middle Office
     description: Il s’agissait d’une application de gestion de Middle Office boursier pour les banques
-  role: Lead Technique / Architecte
-    Architecture du composant
-    Conception et implémentation d’un composant transverse inter-application
-    Lead technique gestion equipe 3 personnes.
-    Branchement sur les applications par injection de dépendance.
-    Passerelles JMS ActiveMQ et MQ Series.
-    Persistence JPA par annotation
-    Webservices et EJB par annotation.
-    Developpement RCP SWT
-    Conception d’un socle technique JMS et MQSeries avec parallélisme
-    Utilisation du plugin maven release.
-    Support technique des équipes
-    persistence JPA par annotation
-    gestion d'un Flux XML par JAXB
-    conception des patterns interne pour factoriser le traitement
-    Conception SQL (documentation, gestion, optimisations)
-
+  role: 
+    title: Lead Technique / Architecte
+    description:
+     - Architecture du composant
+     - Conception et implémentation d’un composant transverse inter-application
+     - Lead technique gestion equipe 3 personnes.
+     - Branchement sur les applications par injection de dépendance.
+     - Passerelles JMS ActiveMQ et MQ Series.
+     - Persistence JPA par annotation
+     - Webservices et EJB par annotation.
+     - Developpement RCP SWT
+     - Conception d’un socle technique JMS et MQSeries avec parallélisme
+     - Utilisation du plugin maven release.
+     - Support technique des équipes
+     - persistence JPA par annotation
+     - gestion d'un Flux XML par JAXB
+     - conception des patterns interne pour factoriser le traitement
+     - Conception SQL (documentation, gestion, optimisations)
   team: 6 personnes
   environment: Serveur JEE avec WebService et JPA, Client RCP. 
  -
@@ -228,12 +211,12 @@ experience:
   project :
     title:  Il s’agissait de développer la gestion des ordinateurs de bord des bus TCL.
   role :
-    Analyse, conception et réalisation de composants EJB et Web
-    Composants métiers avec accès base de données, interactions entre composants
-    Utilisation de Hibernate
-    Composants IHM JSP-Javascript (taglibs et JSTL)
-    Analyse, conception et réalisation d'écrans Swing + archi MVC
-    Composants métiers avec accès base de données, interactions entre composants
+    description:
+     - Analyse, conception et réalisation de composants EJB et Web
+     - Composants métiers avec accès base de données, interactions entre composants
+     - Utilisation de Hibernate
+     - Composants IHM JSP-Javascript (taglibs et JSTL)
+     - Analyse, conception et réalisation d'écrans Swing + archi MVC
 
   team: Autonome / 4 personnes
   environment: JEE5, JBOSS5, JQuery, EJB3, Hibernate, JSP, JQuery, CSS, Javascript, Eclipse - WTP, Windows XP 
@@ -246,12 +229,13 @@ experience:
     title:  Iris
     description: Il s’agissait de développer un nouveau logiciel modulaire de gestion d’information d’entreprises
   role :
-    Analyse, conception et réalisation de composants EJB
-    Composants métiers avec accès base de données, interactions entre composants
-    Utilisation de Toplink
-    Composants IHM JSP2 (taglibs et JSTL)
-    Travail sur les performances mesures et  optimisations avec jMeter.
-    Mise en place des projets sous Jenkins
+    description:
+     - Analyse, conception et réalisation de composants EJB
+     - Composants métiers avec accès base de données, interactions entre composants
+     - Utilisation de Toplink
+     - Composants IHM JSP2 (taglibs et JSTL)
+     - Travail sur les performances mesures et  optimisations avec jMeter.
+     - Mise en place des projets sous Jenkins
 
   team: 40  personnes
   environment: Java jdk 1.5, EJB, Toplink, JSP2, JMeter, CSS, Javascript, Eclipse - Workshop, Windows XP, gestion version SVN, integration continue Hudson. 
@@ -264,22 +248,22 @@ experience:
     description: Il s’agissait de faire évoluer les pages du site concernant les investissements
   role :
    title: 
-   description: |
-    Intégration d’un SSO custom
-    Optimisation des requêtes SQL
-    Tests de performances avec jMeter
-    Intégration du pool de connexion IBM
-    Technologies utilisées : Taglibs JSP Servlets
-    Rédaction de spécifications et du dossier d’exploitation.
+   description:
+    - Intégration d’un SSO custom
+    - Optimisation des requêtes SQL
+    - Tests de performances avec jMeter
+    - Intégration du pool de connexion IBM
+    - Technologies utilisées : Taglibs JSP Servlets
+    - Rédaction de spécifications et du dossier d’exploitation.
   project :
     title:  flux financier
     description: Il s’agissait de faire évoluer l’application de contrôle des flux financiers
   role :
-    description: |
-     Evolution de l’application de Workflow
-     Développement d’un nouveau Workflow de flux financiers.
-     Développements Swing, DB2
-     Export de données fichier plat vers un progiciel de virements automatiques
+    description:
+     - Evolution de l’application de Workflow
+     - Développement d’un nouveau Workflow de flux financiers.
+     - Développements Swing, DB2
+     - Export de données fichier plat vers un progiciel de virements automatiques
 
 
   team: 3 personnes
@@ -292,13 +276,13 @@ experience:
     title:  sites web dont renault-trucks.fr
     description: Il s’agissait de maintenir et faire évoluer les sites web internationaux du groupe.
   role :
-    description: |
-     Support et évolutions sur le site Web de Renault Trucks
-     Projet de référencement sous Google des sites Web
-     Rédaction des préconisations pour le référencement
-     Paramétrage apache pour faire de «  l’url rewriting »
-     Développement des Servlets et mise à jour des JSP pour l’url rewriting
-     Corrections des applications Java/Web existantes
+    description:
+     - Support et évolutions sur le site Web de Renault Trucks
+     - Projet de référencement sous Google des sites Web
+     - Rédaction des préconisations pour le référencement
+     - Paramétrage apache pour faire de «  l’url rewriting »
+     - Développement des Servlets et mise à jour des JSP pour l’url rewriting
+     - Corrections des applications Java/Web existantes
 
   team: Autonome
   environment: Java jdk 1.3, Websphere 5, JSP, servlet Taglibs, CSS, Javascript, WSAD 5.1.2 (Eclipse), SQL Oracle 9, Apache 2.0.58, Windows XP, gestion version CVS. 
@@ -310,13 +294,13 @@ experience:
     title:  Canal
     description: Il s’agissait de développer une application d’analyse médicale.
   role :
-    description: |
-     Architecture Client-Serveur CORBA
-     Base de données objet « FastObjects »
-     Normes de qualité documentaire FDA
-     Travail sur la persistance de objets métiers.
-     Utilisation de SAX/XML, de la sérialisation, de l’introspection Java
-     Réalisation d’un serveur de « proxy Corba » pour décharger du traitement
+    description:
+     - Architecture Client-Serveur CORBA
+     - Base de données objet « FastObjects »
+     - Normes de qualité documentaire FDA
+     - Travail sur la persistance de objets métiers.
+     - Utilisation de SAX/XML, de la sérialisation, de l’introspection Java
+     - Réalisation d’un serveur de « proxy Corba » pour décharger du traitement
 
   team: 12 personnes
   environment: Java jdk 1.4, Borland Visibroker (BES), Poet FastObjects, Eclipse, Windows XP,  gestion version PVCS., XML, SAX 
@@ -328,9 +312,9 @@ experience:
     title:  site portzamparc.fr
     description: Il s’agissait de développer une application de passage d’ordre en ligne.
   role :
-    description: |
-     Développement des servlets et JSP pour l’affichage et le passage d’ordre
-     Utilisation de CSS et JavaScript
+    description: 
+     - Développement des servlets et JSP pour l’affichage et le passage d’ordre
+     - Utilisation de CSS et JavaScript
 
   team: 8 personnes
   environment: Java 1.3, Tomcat Apache, Linux, DB2/400 
@@ -342,10 +326,10 @@ experience:
     title:  résultat d’exploitation
     description: Il s’agissait du développement d’une application de centralisation des données financières.
   role :
-    description: |
-     Développement d’un extracteur de données sous Notes
-     Saisie en mode Web
-     Extraction de fichier Excel automatique
+    description:
+     - Développement d’un extracteur de données sous Notes
+     - Saisie en mode Web
+     - Extraction de fichier Excel automatique
 
   team: Autonome
   environment: Lotus Domino 5, Lotus Script, HTML, JavaScript, NT et WINDOWS 2000 
@@ -371,9 +355,9 @@ experience:
     title:  Sioux
     description: Il s’agissait de spécifier et développer une application de gestion de contrats de la société.
   role :
-     description: |
-      Spécification du modèle de données
-      Développement d’écrans de saisie
+     description:
+      - Spécification du modèle de données
+      - Développement d’écrans de saisie
 
   team: 4 personnes
   environment: Lotus Notes Domino 5.04 
@@ -385,9 +369,9 @@ experience:
     title:  gestion des contrats d’assurance
     description: Il s’agissait de gérer les contrats d’assurance.
   role :
-   description: |
-     Application de Contrôle des Contrats d’Assurance
-     Développement en mode Web sous Domino
+   description:
+     - Application de Contrôle des Contrats d’Assurance
+     - Développement en mode Web sous Domino
 
   team: Autonome
   environment: Lotus Notes Domino 4.6, HTML, JavaScript 
@@ -399,8 +383,8 @@ experience:
     title:  intranet
     description: Il s’agissait de développer les applications intranet.
   role :
-    description: |
-     Développement d’application documentaire et de messagerie intranet en mode Web sous Lotus Notes.
+    description:
+     - Développement d’application documentaire et de messagerie intranet en mode Web sous Lotus Notes.
 
   team: 4 personnes
   environment: Lotus Notes Domino 4.6 HTML, JavaScript 
@@ -412,8 +396,8 @@ experience:
     title:  Référencement des livraisons
     description: Il s’agissait de développer une application servant à référencer les livraisons des autres applications de l’entreprise.
   role :
-    description: |
-     Développement de Workflow sous Lotus Notes 4.6
+    description:
+     - Développement de Workflow sous Lotus Notes 4.6
 
   team: Autonome
   environment:  Lotus Notes Domino 4.6.
@@ -425,8 +409,8 @@ experience:
     title:  Gestion de CV
     description: Il s’agissait de développer une application de gestion de CV pour l’intranet.
   role :
-    description: |
-     Développement d’applications internes Lotus Notes DOMINO
+    description:
+     - Développement d’applications internes Lotus Notes DOMINO
 
   team: Autonome
   environment:  Lotus Notes Domino 4.6
@@ -438,9 +422,9 @@ experience:
     title:  TMA9537
     description: Logiciel de contrôle de transformateurs.
   role :
-    description: |
-     Développement en environnement industriel en langage C sous MS-DOS
-     RS 232
+    description:
+     - Développement en environnement industriel en langage C sous MS-DOS
+     - RS 232
 
   team: 2 personnes
   environment: Borland Turbo C, DOS, PCSoft 
