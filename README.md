@@ -17,3 +17,4 @@ Launch application
 $startserver.bat (works in linux or windows)
 use url:
 http://localhost:8001/app/index.html
+
