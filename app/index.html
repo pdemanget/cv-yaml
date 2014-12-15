@@ -47,7 +47,7 @@ angular.module('cvapp',[]).controller('MainCtrl', function ($scope) {
 @page {
  /* size: A4;*/
   size: A4;
-  margin: 0;
+  margin: 10px	;
 }
 @media print {
   html, body {
@@ -57,8 +57,9 @@ angular.module('cvapp',[]).controller('MainCtrl', function ($scope) {
   body 
     {
         background-color:#FFFFFF; 
-        border: solid 1px black ;
+        /*border: solid 1px black ;*/
         margin: 0px;  /* this affects the margin on the content before sending to printer */
+		padding: 50px;
    }
 }
 /* TODO gestion de l'impression */
@@ -105,12 +106,22 @@ angular.module('cvapp',[]).controller('MainCtrl', function ($scope) {
 
 	/* column-rule: 3px outset #ff00ff;*/
 }
+/* Pas de page break ni column break sur cette classe.
 .no-breakable {
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
   page-break-inside: avoid;
   break-inside: avoid;
+  -moz-page-break-inside: avoid;
+  -moz-break-inside: avoid;
+}
+
+.break-before{
+  page-break-before: always;
+  break-before: always;
+  -moz-page-break-before: always;
+  -moz-break-before: always;
 }
 
 /* ... the rest of the rules ... */
@@ -191,6 +202,13 @@ h3{
     padding-left: 30px; 
 }
 
+.experiences{
+	page-break-before: always;
+}
+.experience{
+	page-break-inside: avoid;
+}
+
 .experience h2{
 	color: #547CA9;
 }
@@ -224,11 +242,14 @@ p {
 	margin: 2px;
 }
 .lang{
-	
+	margin-top: 15px;
 }
 .experiences{
 	clear: left;
 	break-before: always;
+}
+.experience h1{
+	margin-top: 30px;
 }
 .experiences{
 	break-before: auto;
@@ -237,13 +258,20 @@ p {
 .experiences ul {
 	padding-bottom: 20px;
 	margin-bottom: 20px;
-	border-bottom: 1px solid black;
+	/* TODO fix folor */
+	border-bottom: 1px solid #003567;
 }
 .experiences div:last-child ul {
 	padding-bottom: 0;
 	border-bottom: none;
 }
 .experiences ul li {
+    background-image: url('style/bullet.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px; 
+    padding-left: 30px; 
+}
+.lang ul li {
     background-image: url('style/bullet.png');
     background-repeat: no-repeat;
     background-position: 0px 0px; 
@@ -277,7 +305,7 @@ p {
  </div>
 </div>
 
-<div class="formation">
+<div class="formation  break-before">
 	<h1>Formations</h1>
 	<ul><li ng-repeat="f in cv.formations">
 		<h2>{{f.year}}</h2>
@@ -287,21 +315,21 @@ p {
 </div>
 <div class="lang">
 	<h1>Langues</h1>
-	<ul><li ng-repeat="p in cv.languages">{{p}}</li></ul>	
+	<ul><li ng-repeat="lang in cv.languages">{{lang}}</li></ul>	
 </div>
 
 
 
-<div class="experiences">
+<div class="experiences break-before">
 	<h1>Missions- Projets</h1>
-	<div ng-repeat="exp in cv.experience" class="experience">
+	<div ng-repeat="exp in cv.experience" class="experience no-breakable">
 		<h2>{{exp.enterprise}} - {{exp.project.title}}</h2>
 		<ul>
 			<li><b>Durée : </b>{{exp.duration}}</li>
 			<li><b>Projet : </b><br>{{exp.project.description}}</li>
 			<li><b>Rôle : </b>{{exp.role.title}}<br>
 			
-				<p ng-repeat="desc in exp.role.description">{{desc}}</p>
+				<p ng-repeat="desc0 in exp.role.description">{{desc0}}</p>
 			</li>
 			<li><b>Équipe : </b>{{exp.team}}</li>
 			<li><b>Environnement Technique: </b>{{exp.environment}}</li>
