@@ -1,0 +1,160 @@
+.two-columns {
+  column-count: 2;
+  column-gap: 15px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 15px;
+  -moz-column-count: 2;
+  -moz-column-gap: 15px;
+  -o-column-count: 2;
+  -o-column-gap: 15px;
+}
+.no-breakable-col {
+  column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  page-break-inside: avoid;
+  -moz-page-break-inside: avoid;
+  -webkit-page-break-inside: avoid;
+  -o-page-break-inside: avoid;
+}
+
+/* ... the rest of the rules ... */
+html, body {
+  width: 210mm;
+  height: 297mm;
+  /* trick pour imprimer les bulles */
+  -webkit-print-color-adjust: exact;
+  background-color: white !important;
+}
+body {
+  font-size: 10pt;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  color: #58585A;
+  margin: 0px;
+  padding: 25mm 25mm 10mm 25mm;
+  /* a essayer
+  box-shadow: inset 0 0 0 1000px gold;
+  p:before { content: url(images/quote.gif); }
+  */  
+}
+.profile h1 {
+  font-size: 18pt;
+}
+ul li {
+  margin-bottom: 4px;
+}
+.titles {
+  text-align:right;
+}
+.titles h1 {
+  font-size: 20px;
+}
+.titles h2 {
+  font-size: 20px;
+  margin: 5px;
+}
+.profile ul li {
+  background-image: url('bullet.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px; 
+  padding-left: 30px; 
+}
+.name {
+  font-size:30px;
+  font-weight: bold;
+  color: #003567;
+}
+h1 {
+  font-size:30px;
+  color: #003567;
+  text-transform: uppercase;
+  border-bottom: 1px solid #003567;
+}
+h2 {
+  margin: 0 0 5px 0;
+}
+h3 {
+  color: #7F7F7F;
+}
+
+.skills::first-child h2{
+  margin-top: 0;
+}
+.skills ul {
+  margin-bottom: 10px;
+}
+.skills ul li {
+  background-image: url('bullet.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px; 
+  padding-left: 30px; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.formation ul li {
+  background-image: url('bullet.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px; 
+  padding-left: 30px; 
+}
+p {
+  margin: 5px;
+}
+
+.formation {
+  float: left;
+  width: 60%;
+}
+
+.formation h2 {
+  margin: 2px;
+}
+
+.formation h3 {
+  margin: 2px;
+}
+.lang {
+  float: left;
+}
+
+.experiences {
+  clear: both;
+}
+.experiences h1 {
+  margin-top: 30px;
+}
+.experiences ul {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  /* TODO fix folor */
+  border-bottom: 1px solid #003567;
+}
+.experiences div:last-child ul {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.experiences ul li {
+  background-image: url('bullet.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px; 
+  padding-left: 30px; 
+}
+.experience {
+  page-break-inside: avoid;
+}
+.experience h2 {
+  color: #547CA9;
+}
+.lang ul li {
+  background-image: url('bullet.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px; 
+  padding-left: 30px; 
+}

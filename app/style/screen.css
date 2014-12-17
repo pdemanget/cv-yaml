@@ -1,0 +1,27 @@
+table.firstPage thead div.header {
+  float: clear;
+  display: block;
+  background-image: url('header.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  width: 12cm;
+  height: 4cm;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+table.firstPage tfoot {
+  float: clear;
+  display: none;
+}
+table.experiences .filler {
+  display: none;
+}
+table.experiences tfoot {
+  float: clear;
+  display: none;
+}
+.add-a-page {
+  display: none;
+}

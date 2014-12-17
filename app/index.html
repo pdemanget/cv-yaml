@@ -1,341 +1,115 @@
 <!DOCTYPE html>
-<html lang=fr><head>
-<meta charset="UTF-8">	
+<html lang=fr>
+<head>
+<meta charset="UTF-8">  
 <title>CV</title>
-
 <script src="../bower_components/angular/angular.js"></script>
 <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script> -->
 <script src="../bower_components/js-yaml/dist/js-yaml.js"></script>
-<script>
-//the test : 
-//alert ( JSON.stringify( jsyaml.load("a: a") ));
-loadFile= function(url) {
-	if (typeof XMLHttpRequest != 'undefined') {
-		xhr = new XMLHttpRequest();
-	} else {
-		xhr = new ActiveXObject('Microsoft.XMLHTTP');//IE6?
-	}
-
-	try {
-		xhr.open('GET', url, false);
-		xhr.send(null);
-	} catch (e) {
-		isCrossOriginRestricted = true;
-	}
-
-	status = (xhr.status === 1223) ? 204 :(xhr.status === 0 && (self.location || {}).protocol == 'file:') ? 200 : xhr.status;
-
-	if ((status >= 200 && status < 300) || (status === 304) || (status === ''))
-		return xhr.responseText;
-	return null;
-};
-
-var yhr=function(name){
-	return jsyaml.load(loadFile(name));
-};
-try{
-var cv = yhr("data/cv-example.yaml");
-} catch (e) {
-	alert(e);
-}
-angular.module('cvapp',[]).controller('MainCtrl', function ($scope) {
-  $scope.cv=cv;
-});
-</script>
-<style>
-/* 6 paragraphes: titles profile skills  formation languages missions titre #003567 texte #58585A bullets #547CA9 mission*/
-@page {
- /* size: A4;*/
-  size: A4;
-  margin: 10px	;
-}
-@media print {
-  html, body {
-    width: 210mm;
-    height: 297mm;
-  }
-  body 
-    {
-        background-color:#FFFFFF; 
-        /*border: solid 1px black ;*/
-        margin: 0px;  /* this affects the margin on the content before sending to printer */
-		padding: 50px;
-   }
-}
-/* TODO gestion de l'impression */
-    @media screen {
-		/*div.footer {
-			/*display: none;*/
-			background-image: url("style/footer.png");
-			background-repeat: no-repeat;
-			background-origin: border-box;
-			background-size: contain;
-			position: fixed;
-			bottom: 0;
-			width: 210mm;
-			height: 12mm;
-		}*/
+<script type="text/javascript">
+  //the test : 
+  //alert ( JSON.stringify( jsyaml.load("a: a") ));
+  loadFile= function(url) {
+    if (typeof XMLHttpRequest != 'undefined') {
+      xhr = new XMLHttpRequest();
+    } else {
+      xhr = new ActiveXObject('Microsoft.XMLHTTP');//IE6?
     }
-    @media print {
-		div.footer {
-			/*display: none;*/
-			background-image: url("style/footer.png");
-			background-repeat: no-repeat;
-			background-origin: border-box;
-			background-size: contain;
-			position: fixed;
-			bottom: 0;
-			width: 210mm;
-			height: 12mm;
-/*			background-position: 0px 0px,
-                         center;*/
-			-webkit-print-color-adjust: exact;
-		} 
-		.page{
-			background-color: white !important;
-		}
-	}
-	
-.two-columns{
-	column-count: 2;
-	column-gap: 15px;
-	-webkit-column-count: 2;
-	-webkit-column-gap: 15px;
-	-moz-column-count: 2;
-	-moz-column-gap: 15px;
-
-	/* column-rule: 3px outset #ff00ff;*/
-}
-/* Pas de page break ni column break sur cette classe.
-.no-breakable {
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;
-  -moz-page-break-inside: avoid;
-  -moz-break-inside: avoid;
-}
-
-.break-before{
-  page-break-before: always;
-  break-before: always;
-  -moz-page-break-before: always;
-  -moz-break-before: always;
-}
-
-/* ... the rest of the rules ... */
-html{
-   width: 210mm;
-   height: 297mm;
-   	-webkit-print-color-adjust: exact;
-}
-body{
-	font-size:15px;
-	font-weight: normal;
-	font-family: sans-serif;
-    background-image: url("style/header.png");
-    background-repeat: no-repeat;
-    background-size: 12cm 4cm;
-    background-origin: content-box;
-    width: 210mm;
-    height: 297mm;
-	color: #58585A;
-	padding: 120px 50px 50px 100px;
-	/* trick pour imprimer les bulles */
-	-webkit-print-color-adjust: exact;
-/* a essayer
-	background-color: white !important;
-	box-shadow: inset 0 0 0 1000px gold;
-
-p:before { content: url(images/quote.gif); }
-*/	
-}
-
-ul li {
-	margin-bottom: 4px;
-}
-.titles {
-	text-align:right;
-}
-.titles h1{
-	font-size: 20px;
-}
-.titles h2{
-	font-size: 20px;
-	margin: 5px;
-}
-.profile ul li {
-    background-image: url('style/bullet.png');
-    background-repeat: no-repeat;
-    background-position: 0px 0px; 
-    padding-left: 30px; 
-}
-.name{
-	font-size:30px;
-	font-weight: bold;
-	color: #003567;
-}
-h1{
-	font-size:30px;
-	color: #003567;
-	text-transform: uppercase;
-	border-bottom: 1px solid #003567;
-}
-h2 {
-  margin: 0 0 5px 0;
-}
-h3{
-	color: #7F7F7F;
-}
-
-.skills::first-child h2{
-	margin-top: 0;
-}
-.skills ul {
-  margin-bottom: 10px;
-}
-.skills ul li {
-    background-image: url('style/bullet.png');
-    background-repeat: no-repeat;
-    background-position: 0px 0px; 
-    padding-left: 30px; 
-}
-
-.experiences{
-	page-break-before: always;
-}
-.experience{
-	page-break-inside: avoid;
-}
-
-.experience h2{
-	color: #547CA9;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
-
-.formation ul li {
-    background-image: url('style/bullet.png');
-    background-repeat: no-repeat;
-    background-position: 0px 0px; 
-    padding-left: 30px; 
-}
-p {
-	margin: 5px;
-}
-
-.formation{
-	float: left;
-	width: 60%;
-}
-
-.formation h2{
-	margin: 2px;
-}
-
-.formation h3{
-	margin: 2px;
-}
-.lang{
-	margin-top: 15px;
-}
-.experiences{
-	clear: left;
-	break-before: always;
-}
-.experience h1{
-	margin-top: 30px;
-}
-.experiences{
-	break-before: auto;
-	break-inside: avoid;
-}
-.experiences ul {
-	padding-bottom: 20px;
-	margin-bottom: 20px;
-	/* TODO fix folor */
-	border-bottom: 1px solid #003567;
-}
-.experiences div:last-child ul {
-	padding-bottom: 0;
-	border-bottom: none;
-}
-.experiences ul li {
-    background-image: url('style/bullet.png');
-    background-repeat: no-repeat;
-    background-position: 0px 0px; 
-    padding-left: 30px; 
-}
-.lang ul li {
-    background-image: url('style/bullet.png');
-    background-repeat: no-repeat;
-    background-position: 0px 0px; 
-    padding-left: 30px; 
-}
-</style>
-</head><body ng-app="cvapp">
+    try {
+      xhr.open('GET', url, false);
+      xhr.send(null);
+    } catch (e) {
+      isCrossOriginRestricted = true;
+    }
+    status = (xhr.status === 1223) ? 204 :(xhr.status === 0 && (self.location || {}).protocol == 'file:') ? 200 : xhr.status;
+    if ((status >= 200 && status < 300) || (status === 304) || (status === ''))
+      return xhr.responseText;
+    return null;
+  };
+  var yhr=function(name){
+    return jsyaml.load(loadFile(name));
+  };
+  try{
+    var cv = yhr("data/cv-example.yaml");
+  } catch (e) {
+    alert(e);
+  }
+  angular.module('cvapp',[]).controller('MainCtrl', function ($scope) {
+    $scope.cv=cv;
+  });
+</script>
+<link rel="stylesheet" type="text/css" media="all" href="style/styles.css">
+<link rel="stylesheet" type="text/css" media="screen" href="style/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="style/print.css">
+</head>
+<body ng-app="cvapp">
 <noscript>Javascript not started</noscript>
 <div ng-controller="MainCtrl">
-<!--<img src="style/header.png">-->
-<!-- inclusion des balises du CV-->
-<div class="titles">
- <span class="name">{{cv.firstname}} {{cv.lastname}}</span>
- <h2 ng-repeat="title in cv.titles">{{title}}</h2>
+  <table class="firstPage">
+    <thead><tr><td>
+      <div class="header"></div>
+    </td></tr></thead>
+    <tbody><tr><td>
+      <div class="titles">
+       <span class="name">{{cv.firstname}} {{cv.lastname}}</span>
+       <h2 ng-repeat="title in cv.titles">{{title}}</h2>
+      </div>
+      <div class="profile">
+       <h1>Profil</h1>
+       <ul><li ng-repeat="p in cv.profile">{{p}}</li></ul>
+      </div>
+      <div class="skills">
+       <h1>Compétences Techniques et Fonctionnelles</h1>
+       <div class="two-columns">
+        <div ng-repeat="p in cv.skills" >
+         <div class="skill no-breakable-col" ng-repeat="(key, values) in p" contenteditable="true" >
+          <h2>{{key}}</h2>
+          <ul><li ng-repeat="skill in values" contenteditable="true" >{{skill}}</li></ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="formation break-before">
+        <h1>Formations</h1>
+        <ul><li ng-repeat="f in cv.formations" class="no-breakable-col">
+          <h2>{{f.year}}</h2>
+          <h3>{{f.title}}</h3>
+          <span>{{f.school}}</span>
+        </li></ul>
+      </div>
+      <div class="lang">
+        <h1>Langues</h1>
+        <ul><li ng-repeat="lang in cv.languages">{{lang}}</li></ul> 
+      </div>
+    </td></tr></tbody>
+    <tfoot><tr><td>
+      <div class="footer"></div>
+    </td></tr></tfoot>
+  </table>
+  <table class="experiences break-before">
+    <thead><tr><td>
+      <div class="header"><h1>Missions- Projets</h1></div>
+    </td></tr></thead>
+    <tbody>
+      <tr><td>
+        <div ng-repeat="exp in cv.experience" class="experience no-breakable">
+          <h2>{{exp.enterprise}} - {{exp.project.title}}</h2>
+          <ul>
+            <li><b>Durée : </b>{{exp.duration}}</li>
+            <li><b>Projet : </b><br>{{exp.project.description}}</li>
+            <li><b>Rôle : </b>{{exp.role.title}}<br>
+              <p ng-repeat="desc0 in exp.role.description">{{desc0}}</p>
+            </li>
+            <li><b>Équipe : </b>{{exp.team}}</li>
+            <li><b>Environnement Technique: </b>{{exp.environment}}</li>
+          </ul>
+        </div>
+      </td></tr>
+      <tr><td class="add-a-page"></td></tr>
+    </tbody>
+    <tfoot><tr><td>
+      <div class="footer"></div>
+    </td></tr></tfoot>
+  </table>
 </div>
-<div class="profile">
- 
- <h1>Profil</h1>
- <ul><li ng-repeat="p in cv.profile">{{p}}</li></ul>
-</div>
-
-<div class="skills">
- <h1>Compétences Techniques et Fonctionnelles</h1>
- <div class="two-columns">
-  <div ng-repeat="p in cv.skills" >
-   <div class="skill no-breakable" ng-repeat="(key, values) in p" contenteditable="true" >
-	  <h2>{{key}}</h2>
-	  <ul><li ng-repeat="skill in values" contenteditable="true" >{{skill}}</li></ul>
-   </div>
-  </div>
- </div>
-</div>
-
-<div class="formation  break-before">
-	<h1>Formations</h1>
-	<ul><li ng-repeat="f in cv.formations">
-		<h2>{{f.year}}</h2>
-		<h3>{{f.title}}</h3>
-		<span>{{f.school}}</span>
-	</li></ul>
-</div>
-<div class="lang">
-	<h1>Langues</h1>
-	<ul><li ng-repeat="lang in cv.languages">{{lang}}</li></ul>	
-</div>
-
-
-
-<div class="experiences break-before">
-	<h1>Missions- Projets</h1>
-	<div ng-repeat="exp in cv.experience" class="experience no-breakable">
-		<h2>{{exp.enterprise}} - {{exp.project.title}}</h2>
-		<ul>
-			<li><b>Durée : </b>{{exp.duration}}</li>
-			<li><b>Projet : </b><br>{{exp.project.description}}</li>
-			<li><b>Rôle : </b>{{exp.role.title}}<br>
-			
-				<p ng-repeat="desc0 in exp.role.description">{{desc0}}</p>
-			</li>
-			<li><b>Équipe : </b>{{exp.team}}</li>
-			<li><b>Environnement Technique: </b>{{exp.environment}}</li>
-		</ul>
-	</div>
-</div>
-
-<div class="footer"></div>
 </body></html>

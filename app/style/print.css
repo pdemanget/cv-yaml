@@ -1,0 +1,68 @@
+@page {
+  size: A4;
+  margin: 0mm;
+}
+.no-breakable {
+  break-inside: avoid;
+  -moz-break-inside: avoid;
+  -webkit-break-inside: avoid;
+  -o-break-inside: avoid;
+  page-break-inside: avoid;
+  -moz-page-break-inside: avoid;
+  -webkit-page-break-inside: avoid;
+  -o-page-break-inside: avoid;
+  column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+}
+.break-before {
+  break-before: always;
+  -moz-break-before: always;
+  -webkit-break-before: always;
+  -o-break-before: always;
+  page-break-before: always;
+  -moz-page-break-before: always;
+  -webkit-page-break-before: always;
+  -o-page-break-before: always;
+}
+table.firstPage thead div.header {
+  display: block;
+  background-image: url('header.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  width: 12cm;
+  height: 4cm;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+table.firstPage tfoot div.footer {
+  display: block;
+  background-image: url('footer.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: contain;
+  width: 210mm;
+  height: 12mm;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+}
+table.experiences tfoot div.footer {
+  display: block;
+  background-image: url('footer-with-logo.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: contain;
+  width: 210mm;
+  height: 24mm;
+  margin: auto;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+.add-a-page {
+  height: 297mm;
+}
