@@ -62,6 +62,37 @@ languages:
  
 experience:
  -
+  enterprise: Fiducial informatique
+  enterpriseType: Editeur Logiciel
+  duration: "De 01/2015 à 04/2015"
+  project:
+   title: Allégoria
+   description: Logiciel des gestion d'actes Notariés
+  role : 
+   title: Architecte, Tech Leader.
+   description: 
+   - Mise en place Spring Boot 4 avec couche REST
+   - Mise en place Webservices XML avec JAXB
+   - Développements des evolutions WebServices et Ecran
+   - Mise en place Angular sur nouveaux projets
+
+  team: 4 personnes
+  environment: Java Tomcat Spring Flex Eclipse AngularJS
+
+ - 
+  enterprise: Viseo
+  duration :  12/2014
+  project:
+   title: Formation « Angular JS ».
+   description: |
+    Animation de la formation des stagiaires débutants en AngularJS.
+    2 Sessions de formations de 6 stagiaires
+
+  role : 
+   title: Formateur Javascript 
+  team: 12 stagiaires
+  
+ -
   enterprise: AIGA
   enterpriseType: Editeur Logiciel pour la petite enfance
   duration: "De 10/2014 à 11/2014"
