@@ -49,11 +49,14 @@ skills:
  
 
 formations:
- - year: 2008
+ - year: 1998
    title: DESS Génie Informatique, Parallélisme, Systèmes distribués
    school: Université de Franche-Comté, Besançon
  - year: 1996
-   title: Maîtrise d’informatique, Université Claude Bernard, Lyon 1
+   title: |
+           Maîtrise d’informatique,
+           Université Claude Bernard, Lyon 1
+           
  - year: 1991
    title: Bac C
 
