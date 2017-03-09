@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "angular": "*",
-	"js-yaml": "*"
+    "js-yaml": "*",
+    "NPM-Free-Server": "git@github.com:TheJaredWilcurt/NPM-Free-Server.git"
   },
   "devDependencies": {}
 }

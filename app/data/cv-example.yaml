@@ -8,41 +8,53 @@ lastname: DEMANGET
 firstname: Philippe
 titles:
  - Architecte/Concepteur développeur Java sénior
- - 16 ans d’expérience
+ - 18 ans d’expérience
+
+contact: |
+ 116 Rue des chartreux
+ 38290 La Verpilliere
  
+ mailto:pdemanget@gmail.com
+ 06 52 64 37 35
+
+links:
+ - http://github.com/pdemanget
+ - http://pdemanget.github.io
+
+
  
 profile:
- - 16 ans d'expérience en conception et développement Objet.
+ - 18 ans d'expérience en conception et développement Objet.
  - Spécialisé en Java, JEE, Angular, architecture Objet
 
 skills:
- - Langages :
-   - Java
-   - Javascript
-   - C, C++
  - Methodologies : 
    - Scrum
    - UML
- - "Serveurs d’application" : 
-   - JBoss
-   - Tomcat
-   - Glassfish
+ - Développement Java : 
+   - JEE, EJB3, JMS
+   - JPA Toplink EclipseLink Hibernate 
+   - Spring MVC
+   - JAX-RS, REST/JSON
+   - WebServices, JAXB
+   - ANTLR
+ - Serveurs Web/d’application : 
+   - Wildfly, Glassfish, Websphere
+   - Tomcat, Jetty
    - Apache 
+   - Domino
  - Javascript & HTML5 : 
    - AngularJS
    - JSP, JSTL, jQuery 
    - ExtJS
  - SGBDs : 
    - ORACLE, DB2, Posgresql, H2, MySQL, MongoDB 
- - Java : 
-   - JEE, EJB3, JMS
-   - JPA Toplink EclipseLink Hibernate 
-   - Spring MVC
-   - ANTLR
+ - Langages :
+   - Java, Javascript, C, C++
  - Outils :
    - Jenkins
    - JMeter/ SoapUI 
-   - Maven/ant
+   - Maven/ant/gradle
    - Git /svn
    - Npm/bower/grunt
    - Junit karma jenkins
@@ -62,6 +74,23 @@ languages:
  - Anglais
  
 experience:
+ - 
+   enterprise: Incore système
+   enterpriseType: Informatique Industrielle
+   duration: De 01/2016 à 01/2017
+   project: 
+    title: Lineavision
+    Description: Développement d'une nouvelle solution en javaFX.
+   role:
+    title: Architecte - Lead tech
+    description:
+     - Mise en place Architecture javaFX + bus RabbitMQ 
+     - Comparatif IHM JavaFX AngularJS en environnement industriel 
+     - Utilisation des API java8
+
+   team: 4 personnes
+   environment: Java 8 JavaFX RabbitMQ Hibernate Wildfly Maven Eclipse git Jenkins
+    
  -
   enterprise: Fiducial informatique
   enterpriseType: Editeur Logiciel
@@ -284,11 +313,11 @@ experience:
     Intégration du pool de connexion IBM
     Technologies utilisées : Taglibs JSP Servlets
     Rédaction de spécifications et du dossier d’exploitation.
+ - 
   project :
     title:  flux financier
-    description: Il s’agissait de faire évoluer l’application de contrôle des flux financiers
-  role :
     description: |
+     Il s’agissait de faire évoluer l’application de contrôle des flux financiers
      Evolution de l’application de Workflow
      Développement d’un nouveau Workflow de flux financiers.
      Développements Swing, DB2
