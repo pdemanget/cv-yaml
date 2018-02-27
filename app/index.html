@@ -204,12 +204,41 @@ p {
 	
 }
 .experiences{
-	clear: left;
+	clear: both;
 	break-before: always;
 }
 .experiences{
 	break-before: auto;
 	break-inside: avoid;
+}
+.chrono{
+	clear: left;
+}
+/*
+a:link,
+a:visited ,
+a:hover,
+a:active,
+a {
+	font-color:#555;
+}*/
+
+.chrono .mission{
+	clear: both;
+	float: left;
+}
+.chrono a:link{
+	color: #003567;
+	text-decoration: none;
+	white-space: nowrap
+}	
+.chrono div .keywords{
+	position: relative
+	clear: both;
+	white-space: nowrap 
+	float: right;
+	font-size:0.8em;
+	color:#555;
 }
 </style>
 </head><body ng-app="cvapp">
@@ -250,11 +279,18 @@ p {
 	<ul><li ng-repeat="p in cv.languages">{{p}}</li></ul>	
 </div>
 
-
+<div class="chrono">
+	<h1>Chronogramme</h1>
+	<div  ng-repeat="exp in cv.experience">
+		<div class="mission"><a  href="#exp{{$index}}"> {{exp.duration}}-{{exp.role.title}}- {{exp.enterprise}} - {{exp.project.title}}</a></div>
+		<div class="keywords">{{exp.environment}}</div>
+	</div>
+	<br>
+</div>
 
 <div class="experiences">
 	<h1>Missions- Projets</h1>
-	<div ng-repeat="exp in cv.experience" class="experience">
+	<div id="exp{{$index}}" ng-repeat="exp in cv.experience" class="experience">
 		<h2>{{exp.enterprise}} - {{exp.project.title}}</h2>
 		<ul>
 			<li><b>Durée : </b>{{exp.duration}}</li>

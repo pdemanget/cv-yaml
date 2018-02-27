@@ -8,7 +8,7 @@ lastname: DEMANGET
 firstname: Philippe
 titles:
  - Architecte/Concepteur développeur Java sénior
- - 18 ans d’expérience
+ - 19 ans d’expérience
 
 contact: |
  116 Rue des chartreux
@@ -61,7 +61,7 @@ skills:
  
 
 formations:
- - year: 2008
+ - year: 1998
    title: DESS Génie Informatique, Parallélisme, Systèmes distribués
    school: Université de Franche-Comté, Besançon
  - year: 1996
@@ -74,6 +74,23 @@ languages:
  - Anglais
  
 experience:
+ - 
+   enterprise: Enfrasys
+   enterpriseType: Informatique Industrielle
+   duration: De 12/2017 à 03/2018
+   project: 
+    title: MA-IV
+    Description: Gestion Information Voyageur pour TCL.
+   role:
+    title: Architecte - dev
+    description:
+     - Mise en place Architecture Spring docker. 
+     - Mise en place Architecture Java. 
+     - Utilisation des API java 9
+
+   team: 3 personnes
+   environment: Java 9 Spring Boot JavaFX Hibernate docker Maven Eclipse git  
+
  - 
    enterprise: Incore système
    enterpriseType: Informatique Industrielle
