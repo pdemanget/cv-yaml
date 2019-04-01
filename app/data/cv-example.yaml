@@ -8,7 +8,7 @@ lastname: DEMANGET
 firstname: Philippe
 titles:
  - Architecte/Concepteur développeur Java sénior
- - 19 ans d’expérience
+ - 21 ans d’expérience
 
 contact: |
  116 Rue des chartreux
@@ -19,12 +19,12 @@ contact: |
 
 links:
  - http://github.com/pdemanget
- - http://pdemanget.github.io
+ - http://pdemanget.github.io/cv
 
 
  
 profile:
- - 18 ans d'expérience en conception et développement Objet.
+ - 21 ans d'expérience en conception et développement Objet.
  - Spécialisé en Java, JEE, Angular, architecture Objet
 
 skills:
@@ -74,6 +74,64 @@ languages:
  - Anglais
  
 experience:
+ - 
+   enterprise: Enfrasys
+   enterpriseType: Informatique Industrielle
+   duration: 03/2018
+   project: 
+    title: Tunnel de toulon
+    Description: Proxy des commandes systèmes.
+   role:
+    title: Architecte - développeur
+    description:
+     - Mise en place Architecture Java standalone. 
+     - Routage entre 2 protocoles de commandes matérielles. 
+     - Utilisation des API java 9
+
+   team: 3 personnes
+   environment: Java 12, OPCUA, server socket, Maven Eclipse git  
+
+
+ - 
+   enterprise: Afs2r
+   enterpriseType: Informatique Industrielle
+   duration: De 12/2019 à 02/2019
+   project: 
+    title: Agl
+    Description: Gestion automatique d'infraction routières.
+   role:
+    title: Architecte - developppeur
+    description:
+     - Audit
+     - Respect des normes de developpement
+     - Amélioration continue
+     - Passage en mode maintenance
+     - Propositions de migration
+
+   team: 5 personnes
+   environment: Java 8, postresql, Play framework, Intellij git  
+
+ - 
+   enterprise: Enedis
+   enterpriseType: Informatique Industrielle
+   duration: De 04/2018 à 12/2018
+   project: 
+    title: Cinkevol
+    Description: Gestion Information Voyageur pour TCL.
+   role:
+    title: Lead dev
+    description:
+     - Prioriser les taches avec le PO
+     - Suivi régulier de l’avancement projet
+     - Cadrage technique
+     - Contacts avec les projets externes
+     - Développement fullstack
+     - Développement d’un plugin maven pour l’équipe
+
+   team: 6 personnes
+   environment: Java 8 Spring Boot postresql docker Maven Eclipse git  
+
+
  - 
    enterprise: Enfrasys
    enterpriseType: Informatique Industrielle
