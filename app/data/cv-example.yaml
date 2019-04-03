@@ -77,7 +77,7 @@ experience:
  - 
    enterprise: Enfrasys
    enterpriseType: Informatique Industrielle
-   duration: 03/2018
+   duration: 03/2019
    project: 
     title: Tunnel de toulon
     Description: Proxy des commandes systèmes.
@@ -95,15 +95,15 @@ experience:
  - 
    enterprise: Afs2r
    enterpriseType: Informatique Industrielle
-   duration: De 12/2019 à 02/2019
+   duration: De 11/2018 à 02/2019
    project: 
     title: Agl
     Description: Gestion automatique d'infraction routières.
    role:
-    title: Architecte - developppeur
+    title: Architecte - développeur
     description:
      - Audit
-     - Respect des normes de developpement
+     - Respect des normes de développement
      - Amélioration continue
      - Passage en mode maintenance
      - Propositions de migration
@@ -114,10 +114,10 @@ experience:
  - 
    enterprise: Enedis
    enterpriseType: Informatique Industrielle
-   duration: De 04/2018 à 12/2018
+   duration: De 04/2018 à 10/2018
    project: 
     title: Cinkevol
-    Description: Gestion Information Voyageur pour TCL.
+    Description: Gestion maintenance et déploiement concentrateurs linky.
    role:
     title: Lead dev
     description:
