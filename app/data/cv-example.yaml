@@ -24,7 +24,7 @@ links:
 
  
 profile:
- - 21 ans d'expérience en conception et développement Objet.
+ - 22 ans d'expérience en conception et développement Objet.
  - Spécialisé en Java, JEE, Angular, architecture Objet
 
 skills:
@@ -74,6 +74,45 @@ languages:
  - Anglais
  
 experience:
+ - 
+   enterprise: Azenn
+   enterpriseType: Logistique
+   duration: 09/2019 05/2021
+   project: 
+    title: Flux OBS
+    Description: Evolution des projets pour l'envoi vers OBS.
+   role:
+    title: Chef de projet
+    description:
+     - Analyse des nouveaux projets
+     - Evolutions sur les flux de données.
+     - Evolutions sur les installation firmware.
+     - Suivi des projets en maintenance opérationnelle
+     - Réduction de la dette technique projets existants.
+     
+   team: 3 personnes
+   environment: Java 11, Spring boot, Angular, Maven Eclipse git  
+
+
+ - 
+   enterprise: Crédit Agricole
+   enterpriseType: Banque
+   duration: 04/2019 08/2019
+   project: 
+    title: Frameworks CATS
+    Description: Mise à disposition des frameworks du Crédit Agricole.
+   role:
+    title: Architecte - développeur
+    description:
+     - Diverses évolutions sur le framework du Crédit Agricole
+     - Evolutions sur les schedulers du socle. 
+     - Evolution sur les dispatchers de services. 
+     - Veille sur les circuit breaker (micro service)
+
+   team: 3 personnes
+   environment: Java 12, OPCUA, server socket, Maven Eclipse git  
+
+
  - 
    enterprise: Enfrasys
    enterpriseType: Informatique Industrielle
