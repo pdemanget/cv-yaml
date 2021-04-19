@@ -1,6 +1,9 @@
 {
   "name": "bjs",
   "version": "0.0.0",
+  "scripts":{
+    "dev" : "python -m http.server"
+  },
   "dependencies": {
     "bjs": "~0.0.1"
   },

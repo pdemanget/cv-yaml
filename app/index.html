@@ -3,47 +3,55 @@
 <meta charset="UTF-8">	
 <title>CV</title>
 
-<!--
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/js-yaml/dist/js-yaml.js"></script>
--->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+
+<script src="../node_modules/bjs/dist/b.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.10.0/js-yaml.min.js"></script>
 <script>
-//the test : 
-//alert ( JSON.stringify( jsyaml.load("a: a") ));
-loadFile= function(url) {
-	if (typeof XMLHttpRequest != 'undefined') {
-		xhr = new XMLHttpRequest();
-	} else {
-		xhr = new ActiveXObject('Microsoft.XMLHTTP');//IE6?
+	
+/**
+ * convert yaml to object
+ */
+var yhr=function(txt){
+	return jsyaml.load(txt);
+};
+extend=function(me,o){
+	for(k in o){
+		me[k]=o[k];
 	}
-
-	try {
-		xhr.open('GET', url, false);
-		xhr.send(null);
-	} catch (e) {
-		isCrossOriginRestricted = true;
-	}
-
-	status = (xhr.status === 1223) ? 204 :(xhr.status === 0 && (self.location || {}).protocol == 'file:') ? 200 : xhr.status;
-
-	if ((status >= 200 && status < 300) || (status === 304) || (status === ''))
-		return xhr.responseText;
-	return null;
 };
 
-var yhr=function(name){
-	return jsyaml.load(loadFile(name));
-};
-try{
-var cv = yhr("data/cv-example.yaml");
-} catch (e) {
-	alert(e);
+
+async function loadBplugin(b) {
+  b.filters.set("json",JSON.stringify);
 }
-angular.module('cvapp',[]).controller('MainCtrl', function ($scope) {
-  $scope.cv=cv;
-});
+
+async function loadBready(b) {
+    // do the await things here.
+  
+
+      // b is an instance of BJS
+      
+      cvResponse = await fetch("data/cv-example.yaml");
+      cvBody = await cvResponse.text();
+      cv = yhr(cvBody);
+      //flatten skillarray
+      cv.skillArray=[];
+      for(skill of cv.skills){
+        for(key in skill){
+          cv.skillArray.push({key:key,value:skill[key]});
+        }
+      }
+      // extend(b.scope,cv);
+      b.scope.cv=cv;
+      
+      console.debug(JSON.stringify( b.scope,null,2));
+}
+
+document.addEventListener('bplugin', (event) => loadBplugin(event.detail));
+document.addEventListener('bready', (event) => loadBready(event.detail));
+
+
+
 </script>
 <style>
 /* 6 paragraphes: titles profile skills  formation languages missions titre #003567 texte #58585A bullets #547CA9 mission*/
@@ -243,28 +251,29 @@ a {
 	color:#555;
 }
 </style>
-</head><body ng-app="cvapp">
+</head><body>
 <noscript>Javascript not started</noscript>
-<div ng-controller="MainCtrl">
+<div>
+
 <!--<img src="style/header.png">-->
 <!-- inclusion des balises du CV-->
 <div class="titles">
- <span class="name">{{cv.firstname}} {{cv.lastname}}</span>
- <h2 ng-repeat="title in cv.titles">{{title}}</h2>
+ <span class="name"><span bval="cv.firstname"></span> <span bval="cv.lastname"></span></span>
+ <h2 bfor="cv.titles"><span bval="$value"/></h2>
 </div>
 <div class="profile">
  
  <h1>Profil</h1>
- <ul><li ng-repeat="p in cv.profile">{{p}}</li></ul>
+ <ul><li bfor="cv.profile"><span bval="$value"/></li></ul>
 </div>
 
 <div class="skills">
  <h1>Compétences Techniques et Fonctionnelles</h1>
  <div class="two-columns">
-  <div ng-repeat="p in cv.skills" >
-   <div class="skill" ng-repeat="(key, values) in p" contenteditable="true" >
-	 <h2>{{key}}</h2>
-	 <ul><li ng-repeat="skill in values" contenteditable="true" >{{skill}}</li></ul>
+  <div bfor="cv.skillArray" >
+    <div class="skill"  contenteditable="true" >
+     <h2><span bval="$value.key" /></h2>
+     <ul><li bfor="$value.value" contenteditable="true" ><span bval="$value"/></li></ul>
    </div>
   </div>
  </div>
@@ -272,40 +281,44 @@ a {
 
 <div class="formation">
 	<h1>Formations</h1>
-	<ul><li ng-repeat="f in cv.formations">
-		<h2>{{f.year}}</h2><h3>{{f.title}}</h3>{{f.school}}
+	<ul><li bfor="cv.formations">
+		<h2><span bval="$value.year"/></h2><h3><span bval="$value.title"/></h3><span bval="$value.school"/>
 	</li></ul>	
 </div>
 <div class="lang">
 	<h1>Langues</h1>
-	<ul><li ng-repeat="p in cv.languages">{{p}}</li></ul>	
+	<ul><li bfor="cv.languages"><span bval="$value"/></li></ul>	
 </div>
 
 <div class="chrono">
 	<h1>Chronogramme</h1>
-	<div  ng-repeat="exp in cv.experience">
-		<div class="mission"><a  href="#exp{{$index}}"> {{exp.duration}}-{{exp.role.title}}- {{exp.enterprise}} - {{exp.project.title}}</a></div>
-		<div class="keywords">{{exp.environment}}</div>
+	<div  bfor="cv.experience">
+		<div class="mission"><a  href="#exp{{$index}}"> <span bval="$value.year"></span><span bval="$value.duration"></span>- <span bval="$value.role.title"></span> - <span bval="$value.enterprise"/>
+		- <span bval="exp.project.title"></span> </a></div>
+		<div class="keywords"><span bval="$value.environment"/></div>
+		<span bbval="$value|json"></span>
 	</div>
 	<br>
 </div>
 
 <div class="experiences">
 	<h1>Missions- Projets</h1>
-	<div id="exp{{$index}}" ng-repeat="exp in cv.experience" class="experience">
-		<h2>{{exp.enterprise}} - {{exp.project.title}}</h2>
+	<div id="exp{{$index}}" bfor="cv.experience" class="experience">
+		<h2><span bval="$value.enterprise"></span> - <span bval="$value.project.title"></span></h2>
 		<ul>
-			<li><b>Durée : </b>{{exp.duration}}</li>
-			<li><b>Projet : </b><br>{{exp.project.description}}</li>
-			<li><b>Rôle : </b>{{exp.role.title}}<br>
+			<li><b>Durée : </b><span bval="$value.duration"></span></li>
+			<li><b>Projet : </b><br><span bval="$value.project.description"></span></li>
+			<li><b>Rôle : </b><span bval="$value.role.title"></span><br>
 			
-				<p ng-repeat="desc in exp.role.description">{{desc}}</p>
+				<p bfor="$value.role.description"><span bval="$value.desc"></span></p>
 			</li>
-			<li><b>Équipe : </b>{{exp.team}}</li>
-			<li><b>Environnement Technique: </b>{{exp.environment}}</li>
+			<li><b>Équipe : </b><span bval="$value.team"></span></li>
+			<li><b>Environnement Technique: </b><span bval="$value.environment"></span></li>
 		</ul>
 	</div>
 </div>
 
-<div class="footer"></div>
+<div class="footer">
+<span bbval="cv|json"></span>
+</div>
 </body></html>
