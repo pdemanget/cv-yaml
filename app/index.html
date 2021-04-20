@@ -20,10 +20,23 @@ extend=function(me,o){
 	}
 };
 
+// bswitch, brouter ?
 
-async function loadBplugin(b) {
-  b.filters.set("json",JSON.stringify);
-}
+
+class IndexComponent{
+	async loadBplugin(b) {
+	  b.filters.set("json",JSON.stringify);
+	  // b.directives.set("json",JSON.stringify);
+	  // b.routers.set("app/$1",cvcontroller);
+	}
+	
+};
+
+const indexComponent = new IndexComponent();
+
+async function cvcontroller(){
+};
+
 
 async function loadBready(b) {
     // do the await things here.
@@ -47,7 +60,7 @@ async function loadBready(b) {
       console.debug(JSON.stringify( b.scope,null,2));
 }
 
-document.addEventListener('bplugin', (event) => loadBplugin(event.detail));
+document.addEventListener('bplugin', (event) => indexComponent.loadBplugin(event.detail));
 document.addEventListener('bready', (event) => loadBready(event.detail));
 
 
@@ -319,6 +332,6 @@ a {
 </div>
 
 <div class="footer">
-<span bbval="cv|json"></span>
+<span bval="cv|json"></span>
 </div>
 </body></html>
