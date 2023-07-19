@@ -8,7 +8,7 @@ lastname: DEMANGET
 firstname: Philippe
 titles:
  - Architecte/Concepteur développeur Java sénior
- - 22 ans d’expérience
+ - 25 ans d’expérience
 
 contact: |
  116 Rue des chartreux
@@ -24,8 +24,8 @@ links:
 
  
 profile:
- - 22 ans d'expérience en conception et développement Objet.
- - Spécialisé en Java, JEE, Angular, architecture Objet
+ - 25 ans d'expérience en conception et développement Objet.
+ - Spécialisé en Java, JEE, JS, architecture Objet
 
 skills:
  - Methodologies : 
@@ -34,31 +34,29 @@ skills:
  - Développement Java : 
    - JEE, EJB3, JMS
    - JPA Toplink EclipseLink Hibernate 
-   - Spring MVC
-   - JAX-RS, REST/JSON
+   - Spring Boot
+   - REST/JSON
    - WebServices, JAXB
    - ANTLR
  - Serveurs Web/d’application : 
    - Wildfly, Glassfish, Websphere
    - Tomcat, Jetty
    - Apache 
-   - Domino
  - Javascript & HTML5 : 
-   - AngularJS
+   - Angular
    - JSP, JSTL, jQuery 
-   - ExtJS
+   - ReactJS
  - SGBDs : 
-   - ORACLE, DB2, Posgresql, H2, MySQL, MongoDB 
+   - SQL, Posgresql, ORACLE, MongoDB 
  - Langages :
    - Java, Javascript, C, C++
  - Outils :
+   - Maven/gradle
+   - Git
+   - Yarn/Npm/webpack
+   - Junit karma jasmine
    - Jenkins
-   - JMeter/ SoapUI
-   - Maven/ant/gradle
-   - Git /svn
-   - Yarn/Npm/bower
-   - Junit karma jenkins
- 
+   - JMeter/ SoapUI 
 
 formations:
  - year: 1998
@@ -75,9 +73,69 @@ languages:
  
 experience:
  - 
+   enterprise: Coexya
+   enterpriseType: Editeur logiciel
+   duration: 05/2023
+   project: 
+    title: Consore
+    Description: Application médicale.
+   role:
+    title: Lead dev
+    description:
+     - Chiffrage et architecture
+     - Développement des flux de données.
+     - Lead équipe backend.
+     
+   team: 4 personnes
+   environment: Java 8, Spring boot , apache camel, docker swarm
+   # TODO version courte et longue des environnements pour le résumé
+ 
+ - 
+   enterprise: Lombard Odier
+   enterpriseType: Banque
+   duration: 05/2022 05/2023
+   project: 
+    title: Extension framework
+    Description: Framework d'entreprise.
+   role:
+    title: Dev sénior
+    description:
+     - Evolutions du framework en quarkus
+     - passage en compilatio native
+     - Migration des anciennes applications JEE.
+     
+     
+   team: 2 personnes
+   environment: Java 17+ graalvm, Quarkus, docker
+   # TODO version courte et longue des environnements pour le résumé
+
+
+ - 
+   enterprise: HtoH
+   enterpriseType: Voyagiste d'entreprise
+   duration: 05/2021 05/2022 
+   project: 
+    title: Application back et mobile
+    Description: Nouvelle application de voyage pour une startup.
+   role:
+    title: Lead dev
+    description:
+     - Chiffrage et architecture
+     - Développement des flux de données.
+     - Lead équipe backend.
+     - Bonne pratiques agiles et CI/CD
+
+     
+   team: 4 personnes
+   environment: Java 17, Spring boot , Angular, azure
+   # TODO version courte et longue des environnements pour le résumé
+
+ 
+ 
+ - 
    enterprise: Azenn
    enterpriseType: Logistique
-   duration: 09/2019 
+   duration: 09/2019 05/2021
    project: 
     title: Flux OBS
     Description: Evolution des projets pour l'envoi vers OBS.
